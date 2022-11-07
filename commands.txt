@@ -1,0 +1,112 @@
+    1  ls
+    2  cd ..
+    3  mkdir terraforms-azure
+    4  cd terraforms-azure
+    5  ls
+    6  clear
+    7  git clone git@github.com:sweetpeaito/TerraformTestAzure.git
+    8  git clone git@github.com:sweetpeaito/TerraformTestAzure.git
+    9  git clone https://github.com/sweetpeaito/TerraformTestAzure.git
+   10  ls
+   11  . code
+   12  aws configure
+   13  terraform init
+   14  terraform plan
+   15  terraform init
+   16  terraform plan
+   17  terraform init
+   18  ls
+   19  ls
+   20  terraform init
+   21  terraform plan
+   22  terraform apply
+   23  terraform init
+   24  terraform plan
+   25  terraform apply
+   26  terraform init
+   27  terraform plan
+   28  terraform apply
+   29  terraform init
+   30  terraform plan
+   31  terraform apply
+   32  aws sts get-caller-identity
+   33  terraform init
+   34  terraform init
+   35  terraform init -reconfigure
+   36  terraform init -reconfigure
+   37  terraform plan
+   38  terraform init -reconfigure
+   39  terraform plan
+   40  aws configure
+   41  cd ~
+   42  cd /.aws
+   43  ls
+   44  cd  terraforms/
+   45  ls
+   46  cd ..
+   47  cd ~/.aws
+   48  ls
+   49  cd credentials
+   50  cat credentials
+   51  cd /c/PlatformAutomationAWS (master)
+   52  cd /c/PlatformAutomationAWS
+   53  aws configure
+   54  terraform init -reconfigure
+   55  terraform init -reconfigure
+   56  terraform plan
+   57  aws configure
+   58  terraform init -reconfigure
+   59  terraform plan
+   60  aws configure
+   61  terraform init -reconfigure
+   62  terraform plan
+   63  terraform apply
+   64  terraform init 
+   65  terraform init 
+   66  terraform plan
+   67  terraform apply
+   68  terraform init 
+   69  terraform plan
+   70  cd C:\Calloque\calloquy-infrastructure-support-merging-into-main
+   71  cd ~
+   72  cd C:\Calloque\calloquy-infrastructure-support-merging-into-main
+   73  cd C
+   74  cd C:cd calloque
+   75  cd C:cd Calloque
+   76  exit
+   77  docker build -t uberapptest .
+   78  docker image ls
+   79* 
+   80  docker build -i uberapptest .
+   81  docker build --help
+   82  docker run --name test -it debian
+   83  root@d6c0fe130dba:/# exit 13
+   84  echo $?
+   85  13
+   86  docker ps -a | grep test
+   87  docker ls
+   88  docker images
+   89  docker run --name --uberapptest -it uberapp
+   90  docker run -tid uber
+   91  docker images
+   92  docker run -tid uberapptest
+   93  docker container ls
+   94  docker run --name uberapp -it uberapptest
+   95  docker exec -ti 1e8e3d7092c0
+   96  docker exec -ti 1e8e3d7092c0 sh
+   97  aws ecr get-login-password --region *your_aws_region* | docker login --username AWS --password-stdin *your_aws_account_id*.dkr.ecr.*your_aws_region*.amazonaws.com
+   98  aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 486636253131.dkr.ecr.eu-west-2.amazonaws.com
+   99  docker tag uberapptest  486636253131.dkr.ecr.eu-west-2.amazonaws.com
+  100  docker push 486636253131.dkr.ecr.eu-west-2.amazonaws.com/platformautomationaws-ecr
+  101  docker images 
+  102  docker push 486636253131.dkr.ecr.eu-west-2.amazonaws.com:latest/platformautomationaws-ecr
+  103  docker tag uberapptest  486636253131.dkr.ecr.eu-west-2.amazonaws.com
+  104  docker image ls
+  105  docker push 486636253131.dkr.ecr.eu-west-2.amazonaws.com/platformautomationaws-ecr
+  106  docker tag uberapptest  486636253131.dkr.ecr.eu-west-2.amazonaws.com/platformautomationaws-ecr
+  107  docker push 486636253131.dkr.ecr.eu-west-2.amazonaws.com/platformautomationaws-ecr
+  108  aws eks --region eu-west-2 update-kubeconfig --name platformautomationaws-cluster
+  109  kubectl get nodes
+  110  kubectl get ns
+  111  kubectl get pods -n kube-public
+  112  history >> commands.txt
