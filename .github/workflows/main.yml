@@ -21,19 +21,19 @@ jobs:
         uses: hashicorp/setup-terraform@v1
 
       - name: Terraform Init
-        working-directory: Terraform-AWS-Services/
+        working-directory: ./
         run: |
           terraform init \
             -backend-config "bucket=tfstatebucketitohan" \
             -backend-config "key=terraform.tfstate"
           terraform workspace new dev || terraform workspace select dev
       - name: Terraform Format
-        working-directory: Terraform-AWS-Services/
+        working-directory: ./
         run: terraform fmt
 
       - name: Terraform Plan
-        working-directory: Terraform-AWS-Services/
+        working-directory: ./
         run: terraform plan -var="environment=development" 
       - name: Terraform Apply
-        working-directory: Terraform-AWS-Services/
+        working-directory: ./
         run: terraform apply -var="environment=development" -auto-approve
