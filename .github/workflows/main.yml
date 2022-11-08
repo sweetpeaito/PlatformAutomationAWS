@@ -21,20 +21,19 @@ jobs:
         uses: hashicorp/setup-terraform@v1
 
       - name: Terraform Init
-        working-directory: Terraform-AWS-Services/elasticsearch/elasticsearch_configuration/
+        working-directory: Terraform-AWS-Services/
         run: |
           terraform init \
-            -backend-config "bucket=terraform-states-monitoring-platform" \
-            -backend-config "key=elasticsearch-terraform.tfstate"
+            -backend-config "bucket=tfstatebucketitohan" \
+            -backend-config "key=terraform.tfstate"
           terraform workspace new dev || terraform workspace select dev
       - name: Terraform Format
-        working-directory: Terraform-AWS-Services/elasticsearch/elasticsearch_configuration/
+        working-directory: Terraform-AWS-Services/
         run: terraform fmt
 
       - name: Terraform Plan
-        working-directory: Terraform-AWS-Services/elasticsearch/elasticsearch_configuration/
-        run: terraform plan -var="environment=development" -var="elasticsearch_password=${{ secrets.ELASTICSEARCH_PASSWORD }}"
-
+        working-directory: Terraform-AWS-Services/
+        run: terraform plan -var="environment=development" 
       - name: Terraform Apply
-        working-directory: Terraform-AWS-Services/elasticsearch/elasticsearch_configuration/
-        run: terraform apply -var="environment=development" -var="elasticsearch_password=${{ secrets.ELASTICSEARCH_PASSWORD }}" -auto-approve
+        working-directory: Terraform-AWS-Services/
+        run: terraform apply -var="environment=development" -auto-approve
