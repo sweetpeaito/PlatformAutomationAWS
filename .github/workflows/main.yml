@@ -26,14 +26,14 @@ jobs:
           terraform init \
             -backend-config "bucket=tfstatebucketitohan" \
             -backend-config "key=terraform.tfstate"
-          terraform workspace new dev || terraform workspace select dev
+          
       - name: Terraform Format
         working-directory: ./
         run: terraform fmt
 
       - name: Terraform Plan
         working-directory: ./
-        run: terraform plan -var="environment=development" 
+        run: terraform plan 
       - name: Terraform Apply
         working-directory: ./
-        run: terraform apply -var="environment=development" -auto-approve
+        run: terraform apply  -auto-approve
